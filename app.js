@@ -132,5 +132,8 @@ var job = new CronJob('30 1 0 1 * *', function() {
   console.log('You will see this message every second');
 });
 job.start();
+app.get(`/`,(req,res)=>{
+    res.json({message:`welcome to insta ...`})
+})
 connectDB()
 app.listen(port, () => console.log(`running on port  ${port} .......!`))
